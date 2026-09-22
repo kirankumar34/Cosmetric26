@@ -1,0 +1,8 @@
+.playwright-mcp/
+.git
+.github
+*.docx
+*.txt
+*.mp4
+hero-animation-prompt.md
+local-server.js
