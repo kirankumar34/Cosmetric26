@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COSMETRIC'26 — National Level Technical Symposium | Sriram Engineering College (ECE)</title>
+  <meta name="description" content="COSMETRIC'26 — Department of Electronics & Communication Engineering, Sriram Engineering College. Official Symposium Interface.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css?v=2.3">
+</head>
+<body class="mode-stark proto-body">
+
+  <!-- Holographic Perspective Grid Floor & Nanotech Backdrop -->
+  <div class="holographic-grid-floor" aria-hidden="true"></div>
+  <div class="background-grid" aria-hidden="true"></div>
+  <div class="radial-glow-backdrop" aria-hidden="true"></div>
+  <div class="scanline-overlay" aria-hidden="true"></div>
+
+  <!-- ================================================================= -->
+  <!-- 1. PROTOTYPE SUIT BOOT SCREEN (0.0s – 2.0s in Video)               -->
+  <!-- ================================================================= -->
+  <div id="proto-boot-container" class="proto-boot-container" aria-label="System Boot Sequence">
+    <div class="laser-beam-sweep" aria-hidden="true"></div>
+    
+    <div class="proto-boot-box">
+      <span class="hud-corner tl"></span>
+      <span class="hud-corner tr"></span>
+      <span class="hud-corner bl"></span>
+      <span class="hud-corner br"></span>
+
+      <div class="proto-boot-text-wrapper">
+        <div class="proto-boot-title">INITIALIZING ECE SYSTEM</div>
+        <div class="proto-boot-sub">ONLINE <span class="boot-sound-icon">▪)))</span></div>
+      </div>
+      
+      <div class="proto-boot-progress-bar">
+        <div class="proto-boot-progress-fill" id="proto-boot-fill"></div>
+      </div>
+    </div>
+
+    <!-- Skip control -->
+    <div class="proto-boot-skip-wrapper">
+      <button id="btn-skip-boot" class="hud-btn hud-btn-skip" title="Skip Boot Sequence">
+        SKIP BOOT <span class="kbd-hint">[ESC]</span>
+      </button>
+    </div>
+
+    <!-- Star flare in bottom right -->
+    <div class="star-flare-fixed bottom-right" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="32" height="32">
+        <path d="M 20,0 Q 20,20 40,20 Q 20,20 20,40 Q 20,20 0,20 Q 20,20 20,0 Z" fill="#64748b" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- 2. LEFT NUMBERED SIDEBAR NAVIGATION (Matches Prototype 06-08)      -->
+  <!-- ================================================================= -->
+  <aside id="proto-sidebar" class="proto-sidebar" aria-label="Symposium Subsystem Navigation">
+    <div class="sidebar-top">
+      <a href="#hero" class="sidebar-brand">
+        <span class="brand-c-icon">C</span>
+        <span class="brand-text">COSMETRIC'26</span>
+      </a>
+      <button class="sidebar-search-btn" id="sidebar-search-trigger" aria-label="Quick Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul class="sidebar-nav-list">
+        <li>
+          <button class="proto-nav-item active" data-target="hero">
+            <span class="nav-num">01</span>
+            <span class="nav-text">SYSTEM</span>
+            <span class="nav-arrow">&gt;</span>
+          </button>
+        </li>
+        <li>
+          <button class="proto-nav-item" data-target="events">
+            <span class="nav-num">02</span>
+            <span class="nav-text">TECHNICAL</span>
+            <span class="nav-arrow">&gt;</span>
+          </button>
+        </li>
+        <li>
+          <button class="proto-nav-item" data-target="nontech-section">
+            <span class="nav-num">03</span>
+            <span class="nav-text">NON-TECH</span>
+            <span class="nav-arrow">&gt;</span>
+          </button>
+        </li>
+        <li>
+          <button class="proto-nav-item" data-target="showcase">
+            <span class="nav-num">04</span>
+            <span class="nav-text">SHOWCASE</span>
+            <span class="nav-arrow">&gt;</span>
+          </button>
+        </li>
+        <li>
+          <button class="proto-nav-item" data-target="timeline-section">
+            <span class="nav-num">05</span>
+            <span class="nav-text">TIMELINE</span>
+            <span class="nav-arrow">&gt;</span>
+          </button>
+        </li>
+        <li>
+          <button class="proto-nav-item" data-target="register">
+            <span class="nav-num">06</span>
+            <span class="nav-text">REGISTER</span>
+            <span class="nav-arrow">&gt;</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-credit">
+        <span class="credit-dot"></span>
+        <span>SRIRAM ENGG // ECE DEPT</span>
+      </div>
+      <div class="sidebar-tel">SYS.VER: MK-26 // ONLINE</div>
+    </div>
+  </aside>
+  <div id="sidebar-backdrop" class="sidebar-backdrop" aria-hidden="true"></div>
+
+  <!-- ================================================================= -->
+  <!-- 3. MAIN APPLICATION VIEWPORT                                      -->
+  <!-- ================================================================= -->
+  <div id="proto-app-wrapper" class="proto-app-wrapper">
+
+    <!-- Top Navigation Header -->
+    <header class="proto-header" id="proto-header">
+      <div class="header-left">
+        <button id="sidebar-toggle-btn" class="sidebar-toggle-btn" aria-label="Toggle Navigation Sidebar">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <a href="#hero" class="header-logo">
+          <span class="logo-c">C</span>
+          <span class="logo-name">COSMETRIC'26</span>
+        </a>
+      </div>
+
+      <!-- Center Top Nav Links -->
+      <nav class="header-nav">
+        <a href="#hero" class="header-nav-link active" data-target="hero">HOME</a>
+        <a href="#events" class="header-nav-link" data-target="events">EVENTS</a>
+        <a href="#showcase" class="header-nav-link" data-target="showcase">SHOWCASE</a>
+        <a href="#timeline-section" class="header-nav-link" data-target="timeline-section">SCHEDULE</a>
+        <a href="#register" class="header-nav-link" data-target="register">REGISTER</a>
+        <div class="header-nav-indicator" id="header-nav-indicator"></div>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="header-right">
+        <button class="header-icon-btn" id="header-search-btn" title="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+
+        <!-- Circular User Profile Badge with Cyan Ring -->
+        <a href="#register" class="user-profile-badge" title="Delegate Portal">
+          <span class="user-ring-glow"></span>
+          <span class="user-avatar-icon">👤</span>
+        </a>
+
+        <a href="#register" class="header-register-btn">
+          <span>REGISTER NOW</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Flow -->
+    <main class="proto-main">
+
+      <!-- ============================================================= -->
+      <!-- SECTION 1: HERO LANDING (Giant 3D Metallic Title & Laser Ray) -->
+      <!-- ============================================================= -->
+      <section id="hero" class="proto-hero-section">
+        <!-- Flanking PCB Circuit Backgrounds -->
+        <div class="hero-pcb-flank left-flank" aria-hidden="true"></div>
+        <div class="hero-pcb-flank right-flank" aria-hidden="true"></div>
+
+        <!-- Center Chamber -->
+        <div class="hero-center-chamber">
+          
+          <!-- Diagonal Laser Ray with Tracking Crosshair (+) -->
+          <div class="laser-diagonal-track" id="laser-diagonal-track" aria-hidden="true">
+            <div class="laser-ray-line"></div>
+            <div class="tracking-crosshair" id="tracking-crosshair">
+              <span class="ch-h"></span>
+              <span class="ch-v"></span>
+            </div>
+          </div>
+
+          <!-- Giant 3D Metallic Silver Bevel Typography -->
+          <h1 class="hero-giant-metallic-title" id="hero-title" aria-label="COSMETRIC'26">
+            COSMETRIC'26
+          </h1>
+
+          <p class="hero-dept-sub">
+            DEPARTMENT OF ELECTRONICS &amp; COMMUNICATION ENGINEERING // SRIRAM ENGINEERING COLLEGE
+          </p>
+
+          <!-- Chamfered Metallic ENTER SYSTEM Button -->
+          <div class="enter-system-wrapper">
+            <button id="btn-enter-system" class="btn-enter-system" title="Enter Symposium Interface">
+              <span class="btn-chamfer-shape"></span>
+              <span class="btn-label">ENTER SYSTEM</span>
+              <span class="shockwave-ripple" id="shockwave-ripple" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <!-- Bottom Pagination Dashes -->
+          <div class="hero-pagination-bar" aria-hidden="true">
+            <span class="p-dash"></span>
+            <span class="p-dash active"></span>
+            <span class="p-dash"></span>
+            <span class="p-dash"></span>
+            <span class="p-dash"></span>
+          </div>
+
+          <!-- Star Flare Accent -->
+          <div class="star-flare-accent" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="34" height="34">
+              <path d="M 20,0 Q 20,20 40,20 Q 20,20 20,40 Q 20,20 0,20 Q 20,20 20,0 Z" fill="#64748b" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================= -->
+      <!-- SECTION 2: EVENTS HUB (Matches Prototype 08 - 3 Feature Cards)-->
+      <!-- ============================================================= -->
+      <section id="events" class="proto-events-section">
+        
+        <!-- Section Header -->
+        <div class="events-main-header">
+          <div class="header-tab-row">
+            <h2 class="events-tab-title active">SYMPOSIUM EVENTS</h2>
+            <div class="events-filter-row" id="events-filter-row">
+              <button class="event-filter-btn active" data-filter="all">ALL EVENTS (6)</button>
+              <button class="event-filter-btn" data-filter="technical">TECHNICAL (3)</button>
+              <button class="event-filter-btn" data-filter="non-tech">NON-TECH (3)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 Individual Event Cards Grid -->
+        <div class="feature-cards-grid" id="events-cards-grid">
+
+          <!-- EVENT 1: PAPER PRESENTATION (Technical) -->
+          <article class="proto-event-card" id="card-paper-presentation" data-category="technical">
+            <div class="card-circuit-overlay" aria-hidden="true"></div>
+            <div class="card-energy-pulse" aria-hidden="true"></div>
+            <span class="hud-corner tl"></span>
+            <span class="hud-corner tr"></span>
+            <span class="hud-corner bl"></span>
+            <span class="hud-corner br"></span>
+
+            <!-- Visual Header: 3D Wireframe Sine Waveform Canvas -->
+            <div class="card-visual-header wave-visual-header">
+              <canvas id="card-wave-canvas" class="card-canvas"></canvas>
+              <div class="card-visual-tag">TECHNICAL // ARENA 01</div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">PAPER PRESENTATION</h3>
+              <div class="card-sub-info">10 RESEARCH DOMAINS // IEEE FORMAT</div>
+              <p class="card-desc">
+                Present breakthrough research across GAA-FET, 6G Wireless, Chiplet SoC, AI Fault Detection, Energy Harvesting, and Metamaterial Antennas.
+              </p>
+
+              <!-- Rules & Regulations Preview -->
+              <div class="card-rules-box">
+                <div class="rules-box-title">⚡ RULES &amp; REGULATIONS</div>
+                <ul class="rules-preview-list">
+                  <li>Team Size: Maximum 3 members per team.</li>
+                  <li>Timing: 5 mins presentation + 2 mins Q&amp;A viva.</li>
+                  <li>Submit soft copy (pen drive) + 2 hard copies at reporting.</li>
+                  <li>IEEE / standard technical symposium format required.</li>
+                </ul>
+              </div>
+
+              <!-- Staff Coordinators -->
+              <div class="card-speaker-row">
+                <div class="speaker-avatar-circle">
+                  <span>LS</span>
+                </div>
+                <div class="speaker-meta">
+                  <span class="speaker-label">Staff Coordinators:</span>
+                  <span class="speaker-name">Dr. L. SIVAGAMI (Head/ECE)</span>
+                  <span class="speaker-name" style="font-size: 0.72rem; color: var(--arc-cyan);">Mrs. G. AALIN JOYS (AP/ECE)</span>
+                </div>
+                <div class="speaker-date">₹1,700 POOL</div>
+              </div>
+
+              <!-- Student Coordinators -->
+              <div class="card-student-coords-box">
+                <span class="coord-tag-label">STUDENT COORDINATORS:</span>
+                <div class="coord-chips-wrap">
+                  <span class="coord-chip">Ezhilarasi.M <small>IV</small></span>
+                  <span class="coord-chip">Yogeshwaran.S <small>III</small></span>
+                  <span class="coord-chip">Priya Dharshini.K <small>III</small></span>
+                  <span class="coord-chip">Sanjay kumar.G <small>IV</small></span>
+                  <span class="coord-chip">Vishal <small>II</small></span>
+                  <span class="coord-chip">Hari Krishna <small>II</small></span>
+                </div>
+              </div>
+
+              <button class="btn-proto-submit" onclick="openDiagnosticModal('Paper Presentation')">
+                <span>SUBMIT / VIEW FULL RULES</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- EVENT 2: CIRCUIT DEBUGGING (Technical) -->
+          <article class="proto-event-card" id="card-circuit-debugging" data-category="technical">
+            <div class="card-circuit-overlay" aria-hidden="true"></div>
+            <div class="card-energy-pulse" aria-hidden="true"></div>
+            <span class="hud-corner tl"></span>
+            <span class="hud-corner tr"></span>
+            <span class="hud-corner bl"></span>
+            <span class="hud-corner br"></span>
+
+            <!-- Visual Header: Holographic Laptop Workstation -->
+            <div class="card-visual-header laptop-visual-header">
+              <div class="laptop-hologram-svg">
+                <svg viewBox="0 0 200 120" width="100%" height="100%">
+                  <polygon points="40,95 160,95 180,110 20,110" fill="#0f172a" stroke="#4fd8ff" stroke-width="1.2" />
+                  <polygon points="50,20 150,20 155,95 45,95" fill="#020617" stroke="#4fd8ff" stroke-width="1.5" />
+                  <text x="100" y="60" fill="#4fd8ff" font-family="'Orbitron', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">DEBUG</text>
+                  <line x1="55" y1="75" x2="145" y2="75" stroke="rgba(79, 216, 255, 0.4)" stroke-width="1" stroke-dasharray="3 3"/>
+                  <line x1="55" y1="83" x2="145" y2="83" stroke="rgba(79, 216, 255, 0.4)" stroke-width="1" stroke-dasharray="3 3"/>
+                </svg>
+              </div>
+              <div class="card-visual-tag">TECHNICAL // ARENA 02</div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">CIRCUIT DEBUGGING</h3>
+              <div class="card-sub-info">2 TIMED ROUNDS // BREADBOARDS &amp; ICS</div>
+              <p class="card-desc">
+                Identify schematic faults, diagnose integrated chip errors, and restore signal integrity under strict countdown clocks.
+              </p>
+
+              <!-- Rules & Regulations Preview -->
+              <div class="card-rules-box">
+                <div class="rules-box-title">⚡ RULES &amp; REGULATIONS</div>
+                <ul class="rules-preview-list">
+                  <li>Round 1 (Written Screening): 20 Mins (10:00 AM – 1:00 PM).</li>
+                  <li>Round 2 (Hardware Debugging): 30 Mins (1:30 PM – 2:00 PM).</li>
+                  <li>Strictly NO gadgets/smartphones allowed during the event.</li>
+                  <li>Decision of the judges/coordinators will be final.</li>
+                </ul>
+              </div>
+
+              <!-- Staff Coordinators -->
+              <div class="card-speaker-row">
+                <div class="speaker-avatar-circle">
+                  <span>YV</span>
+                </div>
+                <div class="speaker-meta">
+                  <span class="speaker-label">Staff Coordinator:</span>
+                  <span class="speaker-name">Mrs. YAMINI.V</span>
+                  <span class="speaker-dept" style="font-size: 0.68rem; color: var(--text-secondary);">Assistant Professor, ECE</span>
+                </div>
+                <div class="speaker-date">₹1,700 POOL</div>
+              </div>
+
+              <!-- Student Coordinators -->
+              <div class="card-student-coords-box">
+                <span class="coord-tag-label">STUDENT COORDINATORS:</span>
+                <div class="coord-chips-wrap">
+                  <span class="coord-chip">Vallarasu.V <small>IV</small></span>
+                  <span class="coord-chip">Ranjini.A <small>IV</small></span>
+                  <span class="coord-chip">Saraswathi.R <small>III</small></span>
+                  <span class="coord-chip">Thulasi Raman <small>II</small></span>
+                  <span class="coord-chip">Nandhini.T <small>II</small></span>
+                  <span class="coord-chip">Saini.G <small>II</small></span>
+                </div>
+              </div>
+
+              <button class="btn-proto-submit" onclick="openDiagnosticModal('Circuit Debugging')">
+                <span>SUBMIT / VIEW FULL RULES</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- EVENT 3: PROJECT DISPLAY (Technical) -->
+          <article class="proto-event-card" id="card-project-display" data-category="technical">
+            <div class="card-circuit-overlay" aria-hidden="true"></div>
+            <div class="card-energy-pulse" aria-hidden="true"></div>
+            <span class="hud-corner tl"></span>
+            <span class="hud-corner tr"></span>
+            <span class="hud-corner bl"></span>
+            <span class="hud-corner br"></span>
+
+            <!-- Visual Header: Holographic Microcontroller Board -->
+            <div class="card-visual-header project-visual-header">
+              <div class="project-hologram-svg">
+                <svg viewBox="0 0 200 120" width="100%" height="100%">
+                  <!-- PCB Base -->
+                  <rect x="35" y="25" width="130" height="75" rx="6" fill="#040a14" stroke="#4fd8ff" stroke-width="1.5"/>
+                  <!-- Central Processor Chip -->
+                  <rect x="75" y="42" width="50" height="40" rx="3" fill="#0f172a" stroke="#7ff3ff" stroke-width="1.2"/>
+                  <text x="100" y="66" fill="#7ff3ff" font-family="'Orbitron', sans-serif" font-size="9" font-weight="bold" text-anchor="middle">MCU-26</text>
+                  <!-- GPIO IC Pins -->
+                  <line x1="75" y1="48" x2="62" y2="48" stroke="#4fd8ff" stroke-width="1.5"/>
+                  <line x1="75" y1="56" x2="62" y2="56" stroke="#4fd8ff" stroke-width="1.5"/>
+                  <line x1="75" y1="64" x2="62" y2="64" stroke="#4fd8ff" stroke-width="1.5"/>
+                  <line x1="75" y1="72" x2="62" y2="72" stroke="#4fd8ff" stroke-width="1.5"/>
+                  <line x1="125" y1="48" x2="138" y2="48" stroke="#4fd8ff" stroke-width="1.5"/>
+                  <line x1="125" y1="56" x2="138" y2="56" stroke="#4fd8ff" stroke-width="1.5"/>
+                  <line x1="125" y1="64" x2="138" y2="64" stroke="#4fd8ff" stroke-width="1.5"/>
+                  <line x1="125" y1="72" x2="138" y2="72" stroke="#4fd8ff" stroke-width="1.5"/>
+                  <!-- Corner mounting holes -->
+                  <circle cx="45" cy="35" r="3" fill="none" stroke="#4fd8ff" stroke-width="1"/>
+                  <circle cx="155" cy="35" r="3" fill="none" stroke="#4fd8ff" stroke-width="1"/>
+                  <circle cx="45" cy="90" r="3" fill="none" stroke="#4fd8ff" stroke-width="1"/>
+                  <circle cx="155" cy="90" r="3" fill="none" stroke="#4fd8ff" stroke-width="1"/>
+                </svg>
+              </div>
+              <div class="card-visual-tag">TECHNICAL // ARENA 03</div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">PROJECT DISPLAY</h3>
+              <div class="card-sub-info">HARDWARE &amp; SOFTWARE // ECE INNOVATIONS</div>
+              <p class="card-desc">
+                Showcase functional hardware prototypes, IoT innovations, embedded systems, robotics, or advanced software simulations before jury.
+              </p>
+
+              <!-- Rules & Regulations Preview -->
+              <div class="card-rules-box">
+                <div class="rules-box-title">⚡ RULES &amp; REGULATIONS</div>
+                <ul class="rules-preview-list">
+                  <li>Team Size: 2 to 3 members per project.</li>
+                  <li>Both Hardware working models and Software systems eligible.</li>
+                  <li>230V AC power supply &amp; lab workbench provided.</li>
+                  <li>Evaluation on Innovation, Working Model, and Viva.</li>
+                </ul>
+              </div>
+
+              <!-- Staff Coordinators -->
+              <div class="card-speaker-row">
+                <div class="speaker-avatar-circle">
+                  <span>GK</span>
+                </div>
+                <div class="speaker-meta">
+                  <span class="speaker-label">Staff Coordinator:</span>
+                  <span class="speaker-name">Mr. G. KODEESHWARAN</span>
+                  <span class="speaker-dept" style="font-size: 0.68rem; color: var(--text-secondary);">Assistant Professor, ECE</span>
+                </div>
+                <div class="speaker-date">₹1,500 POOL</div>
+              </div>
+
+              <!-- Student Coordinators -->
+              <div class="card-student-coords-box">
+                <span class="coord-tag-label">STUDENT COORDINATORS:</span>
+                <div class="coord-chips-wrap">
+                  <span class="coord-chip">Tameeshwaran G.A <small>IV</small></span>
+                  <span class="coord-chip">Papishna S.G <small>III</small></span>
+                  <span class="coord-chip">Vijay Hari <small>II</small></span>
+                  <span class="coord-chip">Vishva <small>II</small></span>
+                  <span class="coord-chip">Naresh <small>II</small></span>
+                  <span class="coord-chip">Jai Akash.G <small>III</small></span>
+                </div>
+              </div>
+
+              <button class="btn-proto-submit" onclick="openDiagnosticModal('Project Display')">
+                <span>SUBMIT / VIEW FULL RULES</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- EVENT 4: PESAMA NADIDA (Non-Technical) -->
+          <article class="proto-event-card" id="card-pesama-nadida" data-category="non-tech">
+            <div class="card-circuit-overlay" aria-hidden="true"></div>
+            <div class="card-energy-pulse" aria-hidden="true"></div>
+            <span class="hud-corner tl"></span>
+            <span class="hud-corner tr"></span>
+            <span class="hud-corner bl"></span>
+            <span class="hud-corner br"></span>
+
+            <!-- Visual Header: Holographic Cinema & Soundwave -->
+            <div class="card-visual-header cinema-visual-header">
+              <div class="cinema-hologram-svg">
+                <svg viewBox="0 0 200 120" width="100%" height="100%">
+                  <!-- Clapperboard Outline -->
+                  <polygon points="50,40 150,40 145,95 45,95" fill="#040914" stroke="#4fd8ff" stroke-width="1.5"/>
+                  <polygon points="45,28 145,28 150,40 50,40" fill="#0f172a" stroke="#4fd8ff" stroke-width="1.2"/>
+                  <!-- Stripes on Clapper top -->
+                  <line x1="65" y1="28" x2="75" y2="40" stroke="#7ff3ff" stroke-width="2"/>
+                  <line x1="85" y1="28" x2="95" y2="40" stroke="#7ff3ff" stroke-width="2"/>
+                  <line x1="105" y1="28" x2="115" y2="40" stroke="#7ff3ff" stroke-width="2"/>
+                  <line x1="125" y1="28" x2="135" y2="40" stroke="#7ff3ff" stroke-width="2"/>
+                  <!-- Glowing Cinema Text -->
+                  <text x="95" y="70" fill="#4fd8ff" font-family="'Orbitron', sans-serif" font-size="12" font-weight="bold" text-anchor="middle">CINEMA</text>
+                  <text x="95" y="85" fill="#7ff3ff" font-family="'Orbitron', sans-serif" font-size="8" letter-spacing="2" text-anchor="middle">CHARADES</text>
+                </svg>
+              </div>
+              <div class="card-visual-tag">NON-TECH // ARENA 01</div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">PESAMA NADIDA</h3>
+              <div class="card-sub-info">3 PROGRESSIVE LEVELS // ACTION &amp; MUSIC</div>
+              <p class="card-desc">
+                High-voltage entertainment showdown! Action La Answer dumb charades, Tune-Uh Paathu Sollu music matching, and live lyric sing-off.
+              </p>
+
+              <!-- Rules & Regulations Preview -->
+              <div class="card-rules-box">
+                <div class="rules-box-title">⚡ RULES &amp; REGULATIONS</div>
+                <ul class="rules-preview-list">
+                  <li>Team Size: 3 Members (2 active participants per team).</li>
+                  <li>Level 1: Action La Answer (10 pts for &le;10s, 5 pts for &le;20s).</li>
+                  <li>Level 2: Tune-Uh Paathu Sollu (10 pts for &le;5s, 5 pts for &le;10s).</li>
+                  <li>Level 3: Final Lyric Sing-off — first to grab mic answers!</li>
+                </ul>
+              </div>
+
+              <!-- Staff Coordinators -->
+              <div class="card-speaker-row">
+                <div class="speaker-avatar-circle">
+                  <span>BG</span>
+                </div>
+                <div class="speaker-meta">
+                  <span class="speaker-label">Staff Coordinator:</span>
+                  <span class="speaker-name">Mrs. C. BELLA STARY GOLD</span>
+                  <span class="speaker-dept" style="font-size: 0.68rem; color: var(--text-secondary);">Assistant Professor, ECE</span>
+                </div>
+                <div class="speaker-date">₹1,000 POOL</div>
+              </div>
+
+              <!-- Student Coordinators -->
+              <div class="card-student-coords-box">
+                <span class="coord-tag-label">STUDENT COORDINATORS:</span>
+                <div class="coord-chips-wrap">
+                  <span class="coord-chip">Monisha.P <small>IV</small></span>
+                  <span class="coord-chip">Priya Dharshini.K <small>III</small></span>
+                  <span class="coord-chip">Sadhana <small>II</small></span>
+                  <span class="coord-chip">Kavi Priyan <small>II</small></span>
+                  <span class="coord-chip">Pottriselvan <small>II</small></span>
+                  <span class="coord-chip">Sai Varshini <small>II</small></span>
+                </div>
+              </div>
+
+              <button class="btn-proto-submit" onclick="openDiagnosticModal('Pesama Nadida')">
+                <span>SUBMIT / VIEW FULL RULES</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- EVENT 5: VANDHU VILAYADU (Non-Technical) -->
+          <article class="proto-event-card" id="card-vandhu-vilayadu" data-category="non-tech">
+            <div class="card-circuit-overlay" aria-hidden="true"></div>
+            <div class="card-energy-pulse" aria-hidden="true"></div>
+            <span class="hud-corner tl"></span>
+            <span class="hud-corner tr"></span>
+            <span class="hud-corner bl"></span>
+            <span class="hud-corner br"></span>
+
+            <!-- Visual Header: Holographic Reflex & Trophy -->
+            <div class="card-visual-header reflex-visual-header">
+              <div class="reflex-hologram-svg">
+                <svg viewBox="0 0 200 120" width="100%" height="100%">
+                  <!-- Floating 3D Trophy / Challenge Target -->
+                  <polygon points="85,30 115,30 120,60 80,60" fill="#0f172a" stroke="#ffb648" stroke-width="1.5"/>
+                  <line x1="100" y1="60" x2="100" y2="82" stroke="#ffb648" stroke-width="2"/>
+                  <rect x="85" y="82" width="30" height="8" rx="2" fill="#040914" stroke="#ffb648" stroke-width="1.2"/>
+                  <!-- Trophy handles -->
+                  <path d="M 85,35 Q 70,45 82,55" fill="none" stroke="#ffb648" stroke-width="1.5"/>
+                  <path d="M 115,35 Q 130,45 118,55" fill="none" stroke="#ffb648" stroke-width="1.5"/>
+                  <!-- Floating Star & Neon Accent -->
+                  <text x="100" y="50" fill="#ffb648" font-family="'Orbitron', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">5 GAMES</text>
+                </svg>
+              </div>
+              <div class="card-visual-tag">NON-TECH // ARENA 02</div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">VANDHU VILAYADU</h3>
+              <div class="card-sub-info">5 RAPID-FIRE REFLEX CHALLENGES</div>
+              <p class="card-desc">
+                High-octane fun, hand-eye coordination, and agility games: Flip Tac Toe, Walker Bottle, Balloon Cup, Balloon Pyramid, and Bottle Bomb!
+              </p>
+
+              <!-- Rules & Regulations Preview -->
+              <div class="card-rules-box">
+                <div class="rules-box-title">⚡ RULES &amp; REGULATIONS</div>
+                <ul class="rules-preview-list">
+                  <li>Solo / Duo participation permitted.</li>
+                  <li>1. Flip Tac Toe • 2. Walker Bottle (upright flip race).</li>
+                  <li>3. Balloon Cup (lift with inflated balloon, no hands).</li>
+                  <li>4. Balloon Pyramid • 5. Bottle Bomb sudden death.</li>
+                </ul>
+              </div>
+
+              <!-- Staff Coordinators -->
+              <div class="card-speaker-row">
+                <div class="speaker-avatar-circle">
+                  <span>BG</span>
+                </div>
+                <div class="speaker-meta">
+                  <span class="speaker-label">Staff Coordinator:</span>
+                  <span class="speaker-name">Mrs. C. BELLA STARY GOLD</span>
+                  <span class="speaker-dept" style="font-size: 0.68rem; color: var(--text-secondary);">Assistant Professor, ECE</span>
+                </div>
+                <div class="speaker-date">₹1,000 POOL</div>
+              </div>
+
+              <!-- Student Coordinators -->
+              <div class="card-student-coords-box">
+                <span class="coord-tag-label">STUDENT COORDINATORS:</span>
+                <div class="coord-chips-wrap">
+                  <span class="coord-chip">Kirubakaran.G <small>IV</small></span>
+                  <span class="coord-chip">Naveen Kumar.I <small>III</small></span>
+                  <span class="coord-chip">Diwakar <small>II</small></span>
+                  <span class="coord-chip">Jaya Ganapathy <small>II</small></span>
+                  <span class="coord-chip">Abel Jenish <small>II</small></span>
+                  <span class="coord-chip">Sundaresan <small>II</small></span>
+                </div>
+              </div>
+
+              <button class="btn-proto-submit" onclick="openDiagnosticModal('Vandhu Vilayadu')">
+                <span>SUBMIT / VIEW FULL RULES</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- EVENT 6: SURPRISE EVENT (Special Feature Event) -->
+          <article class="proto-event-card" id="card-surprise-event" data-category="non-tech">
+            <div class="card-circuit-overlay" aria-hidden="true"></div>
+            <div class="card-energy-pulse" aria-hidden="true"></div>
+            <span class="hud-corner tl"></span>
+            <span class="hud-corner tr"></span>
+            <span class="hud-corner bl"></span>
+            <span class="hud-corner br"></span>
+
+            <!-- Visual Header: Holographic Cyber Mystery Cube -->
+            <div class="card-visual-header mystery-visual-header">
+              <div class="mystery-hologram-svg">
+                <svg viewBox="0 0 200 120" width="100%" height="100%">
+                  <!-- Cyber Question Core -->
+                  <text x="100" y="72" fill="#7ff3ff" font-family="'Orbitron', sans-serif" font-size="44" font-weight="900" text-anchor="middle" filter="drop-shadow(0 0 10px #4fd8ff)">?</text>
+                  <!-- Orbital rings -->
+                  <ellipse cx="100" cy="60" rx="42" ry="18" fill="none" stroke="rgba(79, 216, 255, 0.4)" stroke-width="1.2" transform="rotate(-15 100 60)"/>
+                  <ellipse cx="100" cy="60" rx="42" ry="18" fill="none" stroke="rgba(255, 182, 72, 0.4)" stroke-width="1.2" transform="rotate(25 100 60)"/>
+                </svg>
+              </div>
+              <div class="card-visual-tag">SPECIAL // ARENA 03</div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">SURPRISE EVENT</h3>
+              <div class="card-sub-info">ON-THE-SPOT CHALLENGE // SYMPOSIUM DAY</div>
+              <p class="card-desc">
+                Mystery challenge unveiled live on symposium day! Test fast thinking, spontaneous logic, and non-linear wits in real-time.
+              </p>
+
+              <!-- Rules & Regulations Preview -->
+              <div class="card-rules-box">
+                <div class="rules-box-title">⚡ RULES &amp; REGULATIONS</div>
+                <ul class="rules-preview-list">
+                  <li>Full challenge mechanics unveiled live in the auditorium.</li>
+                  <li>Open to all registered Cosmetric'26 participants.</li>
+                  <li>Spontaneous analytical &amp; cognitive reflex test.</li>
+                  <li>Exclusive certificates and special accolades awarded.</li>
+                </ul>
+              </div>
+
+              <!-- Staff Coordinators -->
+              <div class="card-speaker-row">
+                <div class="speaker-avatar-circle">
+                  <span>YV</span>
+                </div>
+                <div class="speaker-meta">
+                  <span class="speaker-label">Staff Coordinator:</span>
+                  <span class="speaker-name">Mrs. YAMINI.V</span>
+                  <span class="speaker-dept" style="font-size: 0.68rem; color: var(--text-secondary);">Assistant Professor, ECE</span>
+                </div>
+                <div class="speaker-date">SPECIAL AWARDS</div>
+              </div>
+
+              <!-- Student Coordinators -->
+              <div class="card-student-coords-box">
+                <span class="coord-tag-label">STUDENT COORDINATORS:</span>
+                <div class="coord-chips-wrap">
+                  <span class="coord-chip">Sachin.M <small>IV</small></span>
+                  <span class="coord-chip">Manoj Kumar.B <small>III</small></span>
+                  <span class="coord-chip">Pushpa <small>II</small></span>
+                  <span class="coord-chip">Jai Akash.G <small>III</small></span>
+                  <span class="coord-chip">Santhosh.K <small>IV</small></span>
+                </div>
+              </div>
+
+              <button class="btn-proto-submit" onclick="openDiagnosticModal('Surprise Event')">
+                <span>SUBMIT / VIEW FULL RULES</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Organizing Support Teams Committee Panel -->
+        <div class="organizing-teams-panel" id="nontech-section">
+          <div class="otp-header">
+            <h3 class="otp-title">SYMPOSIUM ORGANIZING COMMITTEE</h3>
+            <span class="otp-badge">DEPARTMENT OF ECE // STUDENT CORPS</span>
+          </div>
+
+          <div class="otp-grid">
+            <!-- Decoration Team -->
+            <div class="otp-col">
+              <div class="otp-col-title">🎨 DECORATION TEAM</div>
+              <ul class="otp-members-list">
+                <li><span>Raghul.B</span> <span class="year-pill">IV Yr</span></li>
+                <li><span>Mohammed Yusuf.A</span> <span class="year-pill">III Yr</span></li>
+                <li><span>Sarveshwaran.S</span> <span class="year-pill">III Yr</span></li>
+                <li><span>Santhosh.K</span> <span class="year-pill">IV Yr</span></li>
+              </ul>
+            </div>
+
+            <!-- Souvenir Team -->
+            <div class="otp-col">
+              <div class="otp-col-title">📘 SOUVENIR TEAM</div>
+              <ul class="otp-members-list">
+                <li><span>Raghul.B</span> <span class="year-pill">IV Yr</span></li>
+                <li><span>Killivalavan.V</span> <span class="year-pill">III Yr</span></li>
+                <li><span>Divakar.R</span> <span class="year-pill">III Yr</span></li>
+                <li><span>Vishal</span> <span class="year-pill">II Yr</span></li>
+              </ul>
+            </div>
+
+            <!-- Editing Team -->
+            <div class="otp-col">
+              <div class="otp-col-title">🎬 EDITING TEAM</div>
+              <ul class="otp-members-list">
+                <li><span>Sachin.M</span> <span class="year-pill">IV Yr</span></li>
+                <li><span>Vallarasu.V</span> <span class="year-pill">IV Yr</span></li>
+                <li><span>Kishore Kumar.K</span> <span class="year-pill">III Yr</span></li>
+              </ul>
+            </div>
+
+            <!-- Certificate Distribution -->
+            <div class="otp-col">
+              <div class="otp-col-title">📜 CERTIFICATE DISTRIBUTION</div>
+              <ul class="otp-members-list">
+                <li><span>Monisha.P</span> <span class="year-pill">IV Yr</span></li>
+                <li><span>Papishna S.G</span> <span class="year-pill">IV Yr</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============================================================= -->
+      <!-- SECTION 3: HOLOGRAPHIC SHOWCASE & SCHEDULE TIMELINE (Frame 12)-->
+      <!-- ============================================================= -->
+      <section id="showcase" class="proto-showcase-section">
+        
+        <!-- Top Holographic Projector Ring -->
+        <div class="holo-projector-ring holo-ring-top" aria-hidden="true">
+          <div class="ring-glow-core"></div>
+        </div>
+
+        <!-- Center Glass HUD Panel: TECH SHOWCASE -->
+        <div class="tech-showcase-card">
+          <span class="hud-corner tl"></span>
+          <span class="hud-corner tr"></span>
+          <span class="hud-corner bl"></span>
+          <span class="hud-corner br"></span>
+
+          <div class="showcase-card-header">
+            <div class="showcase-title">TECH SHOWCASE</div>
+            <div class="showcase-spec">DC REGISTRATION // TELEMETRY</div>
+          </div>
+
+          <!-- Multi-Line 3D Harmonic Waveform Canvas -->
+          <div class="showcase-waveform-wrapper">
+            <canvas id="showcase-wave-canvas" class="showcase-canvas"></canvas>
+            <div class="showcase-grid-overlay" aria-hidden="true"></div>
+          </div>
+
+          <div class="showcase-card-footer">
+            <div class="showcase-status">
+              <span class="status-dot"></span>
+              <span>CARRIER 28.4 GHz LOCKED // NODE CONVERGENCE ACTIVE</span>
+            </div>
+            <div class="showcase-pagination">1 / 6</div>
+          </div>
+        </div>
+
+        <!-- Bottom Holographic Projector Ring -->
+        <div class="holo-projector-ring holo-ring-bottom" aria-hidden="true">
+          <div class="ring-glow-core"></div>
+        </div>
+
+        <!-- DAW-Style Multi-Track SCHEDULE TIMELINE -->
+        <div class="timeline-workstation" id="timeline-section">
+          <div class="workstation-header">
+            <div class="ws-title-group">
+              <h3 class="ws-title">SCHEDULE TIMELINE</h3>
+              <span class="ws-sub">SYMPOSIUM DAY CONCURRENCY TRACKS</span>
+            </div>
+            <div class="ws-controls">
+              <span class="ws-track-count">TRACK: 03</span>
+              <button class="ws-btn-nav">&lt;</button>
+              <button class="ws-btn-nav">&gt;</button>
+            </div>
+          </div>
+
+          <!-- Mobile Horizontal Swipe Hint -->
+          <div class="timeline-swipe-hint" aria-hidden="true">
+            <span class="swipe-hint-icon">⇄</span>
+            <span>SWIPE HORIZONTALLY TO NAVIGATE FULL TIMELINE</span>
+          </div>
+
+          <!-- Responsive Scroll Wrapper -->
+          <div class="timeline-scroll-wrapper">
+            <div class="timeline-inner-container">
+              <!-- Timeline Time Ruler -->
+              <div class="timeline-ruler">
+                <div class="ruler-label" style="left: 0%">09:30 AM</div>
+                <div class="ruler-label" style="left: 18%">10:00 AM</div>
+                <div class="ruler-label" style="left: 36%">11:30 AM</div>
+                <div class="ruler-label" style="left: 54%">01:00 PM</div>
+                <div class="ruler-label" style="left: 72%">02:30 PM</div>
+                <div class="ruler-label" style="left: 90%">04:00 PM</div>
+              </div>
+
+              <!-- Multi-Track Container -->
+              <div class="timeline-tracks-body">
+                
+                <!-- Track 1: Keynote & Registration -->
+                <div class="timeline-track-row">
+                  <div class="track-header-cell">
+                    <span class="th-name">KEYNOTE</span>
+                    <span class="th-dot"></span>
+                  </div>
+                  <div class="track-timeline-lane">
+                    <div class="timeline-block block-cyan" style="left: 0%; width: 16%;" title="Inauguration & Keynote Address">
+                      <span>INAUGURAL // 09:30 AM</span>
+                    </div>
+                    <div class="timeline-block block-dark" style="left: 54%; width: 14%;" title="Lunch Break">
+                      <span>LUNCH // 01:00 PM</span>
+                    </div>
+                    <div class="timeline-block block-gold" style="left: 80%; width: 18%;" title="Valedictory & Prize Distribution">
+                      <span>VALEDICTORY // 03:45 PM</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Track 2: Technical Competitions -->
+                <div class="timeline-track-row">
+                  <div class="track-header-cell">
+                    <span class="th-name">TECHNICAL</span>
+                    <span class="th-dot"></span>
+                  </div>
+                  <div class="track-timeline-lane">
+                    <div class="timeline-block block-cyan-bright" style="left: 16%; width: 36%;" title="Paper Presentation & Circuit Debugging Round 1">
+                      <span>CIRCUIT DEBUGGING R1 &amp; PAPER PRES // 10:00 AM – 01:00 PM</span>
+                    </div>
+                    <div class="timeline-block block-blue" style="left: 20%; width: 32%;" title="Project Display">
+                      <span>PROJECT DISPLAY // 10:30 AM – 01:00 PM</span>
+                    </div>
+                    <div class="timeline-block block-cyan-bright" style="left: 58%; width: 16%;" title="Circuit Debugging Round 2">
+                      <span>DEBUGGING R2 // 01:30 PM</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Track 3: Non-Technical Arenas -->
+                <div class="timeline-track-row">
+                  <div class="track-header-cell">
+                    <span class="th-name">NON-TECH</span>
+                    <span class="th-dot"></span>
+                  </div>
+                  <div class="track-timeline-lane">
+                    <div class="timeline-block block-purple" style="left: 58%; width: 22%;" title="Pesama Nadida 3-Level Arena">
+                      <span>PESAMA NADIDA // 01:30 PM</span>
+                    </div>
+                    <div class="timeline-block block-teal" style="left: 62%; width: 18%;" title="Vanthu Velayadu 5-Challenge Arena">
+                      <span>VANTHU VELAYADU // 01:45 PM</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============================================================= -->
+      <!-- SECTION 4: ACCESS REQUEST / REGISTRATION (Matches Frame 14)   -->
+      <!-- ============================================================= -->
+      <section id="register" class="proto-register-section">
+        
+        <div class="access-request-card" id="access-request-card">
+          <span class="hud-corner tl"></span>
+          <span class="hud-corner tr"></span>
+          <span class="hud-corner bl"></span>
+          <span class="hud-corner br"></span>
+
+          <div class="ar-header">
+            <h2 class="ar-title">Register for COSMETRIC'26</h2>
+            <p class="ar-subtitle">
+              Complete the official registration form below to authenticate delegate credentials and reserve your spot in symposium arenas.
+            </p>
+          </div>
+
+          <!-- Embedded Google Form Container -->
+          <div class="google-form-embed-wrapper" id="google-form-wrapper">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSerK2LBn3EYDkru6rtX-v6BQ6jIgD6c5wVJX9vXsE_jbQHYcQ/viewform?embedded=true"
+              title="COSMETRIC'26 Registration Form"
+              loading="lazy"
+              class="google-form-iframe"
+            >
+              Loading…
+            </iframe>
+          </div>
+
+          <!-- Fallback Link -->
+          <p class="form-fallback-note">
+            Form not loading?
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSerK2LBn3EYDkru6rtX-v6BQ6jIgD6c5wVJX9vXsE_jbQHYcQ/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="form-fallback-link"
+            >Open it in a new tab</a>.
+          </p>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="proto-footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">COSMETRIC'26</div>
+          <p>National Level Technical Symposium | Department of Electronics &amp; Communication Engineering</p>
+          <div class="footer-tag">SRIRAM ENGINEERING COLLEGE, PERUMALPATTU, TIRUVALLUR DT, TAMIL NADU 602024</div>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2026 Department of ECE, Sriram Engineering College. All rights reserved.</p>
+          <p class="footer-status-line">SYSTEM STATUS: NOMINAL // CARRIER: 28.4 GHz LOCKED</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- 4. INTERACTIVE DIAGNOSTIC MODAL WINDOW (Matches Prototype 10)     -->
+  <!-- ================================================================= -->
+  <div id="diagnostic-modal-backdrop" class="modal-backdrop hidden" aria-hidden="true">
+    <div class="diagnostic-window-modal" id="diagnostic-window-modal" role="dialog" aria-modal="true">
+      
+      <!-- macOS Window Header with Traffic Lights -->
+      <div class="diag-window-header">
+        <div class="window-traffic-lights">
+          <button class="w-dot dot-close" id="modal-close-btn" title="Close"></button>
+          <button class="w-dot dot-min" title="Minimize"></button>
+          <button class="w-dot dot-max" title="Maximize"></button>
+        </div>
+        <div class="window-url-pill">
+          <span class="lock-icon">🔒</span>
+          <span id="modal-url-text">cosmetric.com/diagnostic</span>
+        </div>
+        <div class="window-actions-right">
+          <button class="w-icon-btn">+</button>
+          <button class="w-icon-btn">⤢</button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Two-Column Layout + Left Mini Icon Rail) -->
+      <div class="diag-window-body">
+        
+        <!-- Left Mini Icon Rail -->
+        <div class="diag-mini-rail">
+          <div class="rail-logo">C</div>
+          <div class="rail-nav-icons">
+            <button class="rail-btn active" title="Details">📋</button>
+            <button class="rail-btn" title="Search">🔍</button>
+            <button class="rail-btn" title="Rules">📌</button>
+            <button class="rail-btn" title="Exit" onclick="closeDiagnosticModal()">🚪</button>
+          </div>
+        </div>
+
+        <!-- Left Pane: DIAGNOSTIC Node Timeline -->
+        <div class="diag-left-pane">
+          <h2 class="diag-pane-title" id="modal-event-title">DIAGNOSTIC</h2>
+
+          <!-- Vertical Node Timeline -->
+          <div class="diag-node-timeline">
+            
+            <!-- Node 1: Event Rules -->
+            <div class="timeline-node-item">
+              <div class="node-bullet"></div>
+              <div class="node-content">
+                <h4 class="node-heading">EVENT RULES:</h4>
+                <ul class="node-list" id="modal-rules-list">
+                  <li>No gadgets, phones, or smart devices allowed during the event.</li>
+                  <li>Participants must strictly follow the allotted round times.</li>
+                  <li>Any malpractice results in immediate disqualification.</li>
+                  <li>Judges and coordinators decisions are final and binding.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Node 2: Coordinators -->
+            <div class="timeline-node-item">
+              <div class="node-bullet"></div>
+              <div class="node-content">
+                <h4 class="node-heading">SPEAKS / COORDINATORS:</h4>
+                <div class="coordinators-avatar-row" id="modal-coordinators-row">
+                  <!-- Dynamically populated -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Node 3: Description -->
+            <div class="timeline-node-item">
+              <div class="node-bullet"></div>
+              <div class="node-content">
+                <h4 class="node-heading">DESCRIPTION:</h4>
+                <p class="node-desc-text" id="modal-desc-text">
+                  Complete event description, round specifications, and analytical criteria.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Pane: EVENT DETAILS & Registration Button -->
+        <div class="diag-right-pane">
+          <h3 class="right-pane-title">EVENT DETAILS</h3>
+
+          <div class="right-detail-group">
+            <div class="rd-label">EVENT TIMING:</div>
+            <div class="rd-val" id="modal-timing-text">10:00 AM – 01:00 PM // 01:30 PM – 02:00 PM</div>
+          </div>
+
+          <div class="right-detail-group">
+            <div class="rd-label">CASH PRIZE POOL:</div>
+            <div class="rd-val gold-highlight" id="modal-prize-text">1st: ₹1,000 | 2nd: ₹700</div>
+          </div>
+
+          <div class="right-detail-group">
+            <div class="rd-label">FACULTY IN-CHARGE:</div>
+            <div class="speaker-profile-card" id="modal-speaker-card">
+              <div class="sp-avatar" id="modal-speaker-avatar">LS</div>
+              <div class="sp-info">
+                <div class="sp-name" id="modal-speaker-name">Dr. L. SIVAGAMI</div>
+                <div class="sp-dept">Department of ECE, Sriram Engg</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-proto-submit right-pane-submit" id="btn-modal-register" onclick="selectEventAndScroll()">
+            <span>SUBMIT / REGISTER NOW</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================================================================= -->
+  <!-- 5. TRANSMITTED CONFIRMATION MODAL (Matches Prototype 15)          -->
+  <!-- ================================================================= -->
+  <div id="transmitted-modal-backdrop" class="modal-backdrop hidden" aria-hidden="true">
+    <div class="transmitted-modal-card" role="dialog" aria-modal="true">
+      <div class="modal-glow-bar"></div>
+
+      <!-- Glowing Cyan Checkmark Arc -->
+      <div class="checkmark-arc-container">
+        <svg class="checkmark-svg" viewBox="0 0 80 80">
+          <circle cx="40" cy="40" r="32" class="cm-circle-track" />
+          <circle cx="40" cy="40" r="32" class="cm-circle-arc" stroke-dasharray="200" stroke-dashoffset="50" />
+          <polyline points="26,42 36,52 54,32" class="cm-check" />
+        </svg>
+      </div>
+
+      <h2 class="transmitted-title">REQUEST TRANSMITTED</h2>
+      <div class="transmitted-id" id="transmitted-id-val">REGISTRATION ID: 92838831205</div>
+      <p class="transmitted-sub">
+        You must remember your registration code. A formal biometric verification pass has been generated and dispatched to your email.
+      </p>
+
+      <div class="transmitted-agree-row">
+        <span class="t-check">✔</span>
+        <span>Delegate pass allocation secured in Department of ECE registry.</span>
+      </div>
+
+      <button id="btn-transmitted-done" class="btn-proto-submit transmitted-done-btn">
+        <span>DONE</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Engine -->
+  <script src="app.js?v=2.3"></script>
+</body>
+</html>

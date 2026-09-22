@@ -1,0 +1,120 @@
+SRIRAM ENGINEERING COLLEGE
+TECHNICAL EVENTS :
+PAPER PRESENTATION :
+STAFF COORDINATER :  Dr.L.SIVAGAMI
+TOPICS
+1)GAA (Gate-All-Around) FET Technology
+2)Chiplet-Based System-on-Chip (SoC)
+3)6G Wireless Communication
+4)AI-Based Electronic Fault Detection
+5)Wireless Sensor Networks
+6)Edge Computing in IoT
+7)Energy Harvesting IoT Sensors
+8)Secure IoT Hardware
+9)Metamaterial-Based Antennas
+10)Massive MIMO and Advanced Beamforming
+WINNER : 1000 RS 1ST
+RUNNER : 700 rs 2ND
+CIRCUIT DEBUGGING :
+STAFF COORDINATER : MRS YAMINI D
+⏱️ Event Details
+- Round 1: 20 Minutes
+- Round 2: 30 Minutes
+- Round 1 Timing: 10:00 AM – 1:00 PM
+- Round 2 Timing: 1:30 PM – 2:00 PM
+📌 Rules & Regulations
+- No gadgets are allowed during the event.
+- Participants must strictly follow the allotted time.
+- Any form of malpractice will result in disqualification.
+- Participants must follow the instructions given by the event coordinators.
+- The decision of the judges/coordinators will be final.
+🏆 Prizes
+🥇 Winner – ₹1,000
+🥈 Runner-up – ₹700
+PROJECT DISPLAY :
+STAFF COORDINATER : G KODEESHWARAN
+ECE RELATED PROJECTS : HARDWARE / SOFTWARE
+WINNER : 900 rs 1st
+RUNNER : 600 rs 2nd
+NON-TECH :
+PESAMA NADIDA
+Staff Coordinator : Mrs. Bella Stary Gold
+Prizes
+Winner – ₹700
+Runner-up – ₹300
+General Rules
+- Total team members: 3
+- Only 2 members from each team will participate.
+LEVEL 1 — ACTION LA ANSWER
+- The host will provide two movie titles to each team.
+- One participant must act out one movie title.
+- The other participant must guess the movie.
+- All teams will participate simultaneously.
+Points:
+- 10 points for finding the answer within 10 seconds.
+- 5 points for finding the answer within 20 seconds.
+LEVEL 2 — TUNE-UH PAATHU SOLLU
+- The host will provide a random word and a song name to each team.
+- One participant must give a tune using the given word.
+- The other participant must identify the song.
+Points:
+- 10 points for finding the answer within 5 seconds.
+- 5 points for finding the answer within 10 seconds.
+- The two teams with the highest scores will qualify for Level 3.
+LEVEL 3 — FINAL ROUND
+- The host will play a song and stop it midway.
+- Participants from the two finalist teams must identify and sing the missing lyrics.
+- The participant who picks up the microphone first gets the chance to answer.
+- If the answer is incorrect or the participant does not know the lyrics, the opposing team gets the chance to answer.
+- The team that successfully completes the final challenge will be declared the Winner.
+VANTHU VELAYADU
+Staff Coordinator: Mrs. Bella Stary Gold
+Prizes:
+1st Prize: ₹700
+2nd Prize: ₹300
+---
+1. FLIP TAC TOE
+Rules & Regulations
+1. On the signal, the player must flip the cup and make it land upside down.
+2. If the cup falls or fails to land correctly, the player must retry until successful.
+3. After successfully flipping the cup, the player must place it on any empty square of the Tic-Tac-Toe board.
+4. The turn passes to the next player after the cup is successfully placed.
+5. The first player or team to get three cups in a row horizontally, vertically, or diagonally wins the round.
+---
+2. WALKER BOTTLE
+Rules & Regulations
+1. A straight ladder-shaped grid with an odd number of squares will be marked on the playing surface.
+2. The middle square will be marked with an "X", and a marker bottle will be placed on it.
+3. Each player will be provided with a water bottle filled approximately two-thirds full.
+4. On the whistle, players must repeatedly flip the bottle and make it land upright.
+5. For every successful bottle flip, the player can move the marker bottle one space towards the opponent's side.
+6. The first player to move the marker bottle completely to the opponent's side wins.
+7. If the time limit expires, the player whose marker is closest to the opponent's side wins.
+---
+3. BALLOON CUP
+Rules & Regulations
+1. Players are not allowed to touch the cups directly with their hands.
+2. An uninflated balloon must be placed inside a plastic cup.
+3. The balloon must be inflated sufficiently to grip the inner surface of the cup.
+4. Players must lift and move the cup using only the balloon.
+5. The cup must be placed on another cup to build the required structure.
+6. The balloon must be deflated gently to release the cup.
+7. The first player to complete the required stack wins.
+---
+4. BALLOON PYRAMID
+Rules & Regulations
+1. Players are not allowed to touch the cups directly with their hands.
+2. A deflated balloon must be inserted inside a cup and inflated to grip the cup.
+3. Players must transport the cup using only the balloon.
+4. The cups must be placed layer by layer to construct the required pyramid.
+5. If a cup falls or the pyramid collapses, the player must continue using the balloon technique to reposition the cup.
+6. The first player or team to successfully complete the pyramid wins.
+---
+5. BOTTLE BOMB
+Rules & Regulations
+1. Players must complete the given challenge within the allotted time.
+2. The challenge may include bottle flipping, matching, or other tasks specified by the event coordinator.
+3. One player will begin the challenge when instructed by the coordinator.
+4. After successfully completing the challenge, the player must pass the turn to the next participant.
+5. If the timer expires before the challenge is completed, the player loses that round.
+6. The player or team with the highest number of successful rounds or points will be declared the winner.
