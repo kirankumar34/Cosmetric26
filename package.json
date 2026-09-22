@@ -2,10 +2,9 @@
   "name": "cosmetrix26",
   "version": "1.0.0",
   "description": "COSMETRIC'26 — Stark Industries / J.A.R.V.I.S. Interface | Sriram Engineering College ECE",
-  "main": "server.js",
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js",
+    "dev": "node local-server.js",
+    "start": "node local-server.js",
     "serve": "npx serve -l 3000"
   },
   "keywords": [
